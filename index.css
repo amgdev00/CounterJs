@@ -1,0 +1,138 @@
+/* 
+  Etapa 1: Reset básico
+  - Remove espaçamentos padrão do navegador para manter consistência visual.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+  Etapa 2: Cores neutras (fáceis de manter e visual limpo)
+  - Você pode trocar aqui se quiser personalizar.
+*/
+:root {
+  --bg: #dcdcdc;
+  --card: #efefef;
+  --text: #1f1f1f;
+  --muted: #505050;
+  --border: #b8b8b8;
+  --btn: #cfcfcf;
+  --btn-hover: #bdbdbd;
+}
+
+/*
+  Etapa 3: Corpo da página
+  - Centraliza o conteúdo vertical e horizontalmente.
+  - Define fonte e cor geral.
+*/
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/*
+  Etapa 4: Wrapper principal
+  - Mantém o card centralizado na tela.
+*/
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+/*
+  Etapa 5: Card do contador
+  - Bloco visual principal com borda suave e sombra leve.
+*/
+.counter-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  padding: 28px;
+  text-align: center;
+}
+
+/*
+  Etapa 6: Título
+  - Apenas apresentação visual.
+*/
+.title {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+/*
+  Etapa 7: Número do contador
+  - Visual destacado para ficar fácil de ler.
+  - Este elemento será atualizado pelo JavaScript.
+*/
+.counter-value {
+  font-size: 3.4rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+/*
+  Etapa 8: Linha dos botões
+  - Organiza os botões lado a lado com espaçamento.
+*/
+.actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/*
+  Etapa 9: Estilo base dos botões
+  - Formato simples e neutro.
+*/
+.btn {
+  border: 1px solid var(--border);
+  background: var(--btn);
+  color: var(--text);
+  width: 100%;
+  max-width: none;
+  min-height: 56px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+/*
+  Etapa 10: Interação visual ao passar o mouse
+*/
+.btn:hover {
+  background: var(--btn-hover);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/*
+  Etapa 11: Efeito ao clicar
+*/
+.btn:active {
+  transform: translateY(1px);
+}
+
+/*
+  Etapa 12: Botão reset com tom um pouco diferente
+  - Continua neutro, só para dar leve destaque.
+*/
+.btn-reset {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  margin-top: 4px;
+}

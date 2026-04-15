@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador Interativo</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!--
+      Etapa 1: Container principal da página
+      - Serve para centralizar o card do contador na tela.
+      - No JavaScript você normalmente não precisa mexer aqui.
+    -->
+    <div class="page">
+      <!--
+        Etapa 2: Card do contador
+        - Agrupa título, valor e botões em um único bloco visual.
+      -->
+      <div class="counter-card">
+        <!--
+          Etapa 3: Título do componente
+          - Elemento apenas visual/informativo.
+        -->
+        <h1 class="title">Contador Interativo</h1>
+
+        <!--
+          Etapa 4: Display do valor do contador
+          - Este é o elemento mais importante para o JavaScript.
+          - ID: "counter-value" (use para selecionar e atualizar o número).
+        -->
+        <p id="counter-value" class="counter-value">0</p>
+
+        <!--
+          Etapa 5: Área dos botões
+          - Botões que você vai conectar com addEventListener no JavaScript.
+        -->
+        <div class="actions">
+          <!-- Botão de incrementar -->
+          <button id="btn-increase" class="btn" type="button">+1</button>
+
+          <!-- Botão de decrementar -->
+          <button id="btn-decrease" class="btn" type="button">-1</button>
+
+          <!-- Botão de resetar -->
+          <button id="btn-reset" class="btn btn-reset" type="button">Reset</button>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
